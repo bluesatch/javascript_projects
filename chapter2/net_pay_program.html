@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Net Pay Program</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Net Pay Calculator</h1>
+    <p>Calculate the net pay for an employee.It takes the gross pay and deducts Federal, State, FICA. It has the option to deduct any additional amount from the gross amount. Then it displays the net pay.</p>
+    <!--Fed 15%-->
+    <!--State 5%-->
+    <!--FICA 7.62%-->
+    <!--If Any Additional-->
+    <ol>
+        <li>START</li>
+        <li>SET grossPay</li>
+        <li>DISPLAY Enter your gross pay</li>
+        <li>INPUT grossPay</li>
+        <li>Set federal = 0.15</li>
+        <li>Set state = 0.05</li>
+        <li>Set FICA = .0762</li>
+        <li>Set net = grossPay - ((grossPay * federal) + (grossPay * state) + (grossPay * FICA))</li>
+        <li>DISPLAY Any additional deductions?</li>
+        <li>SET deduct</li>
+        <li>INPUT deduct</li>
+        <li>SET netPay = net - deduct</li>
+        <li>DISPLAY netPay</li>
+        <li>END</li>
+    </ol>
+
+    <h2>Net Pay Calculator</h2>
+    <form action="#" onsubmit="netpay()">
+        <p>Enter your gross pay</p>
+        <input type="text" id="gross">
+        <p>Any additional deductions? Enter '0' for none</p>
+        <input type="text" id="deduct" value="0">
+        <input type="submit">
+    </form>
+    <p>Your net pay is $<span id="output" class="output"></span>.</p>
+    <script src="js/gross.js"></script>
+    
+</body>
+</html>

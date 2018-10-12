@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Version 3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Version 3</h1>
+    <p>A simple PTO calculator that uses how many years you worked to get correct PTO rate. Then uses how many weeks you have worked so far this year to calculate total PTO to date. Then deducts any PTO that you have taken to date. Results can be returned in hours or days or weeks.</p>
+    <p>less than 5 rate is 5</p>
+    <p>1-4 years = 5 hours</p>
+    <p>5 years = 6 hours</p>
+    <p>10 years = 7</p>
+    <p>PSEUDOCODE!!</p>
+    <ol>
+        <li>START</li>
+        <li>SET years</li>
+        <li>DISPLAY "How many years have you worked?"</li>
+        <li>Input years</li>
+        <li>SET rate</li>
+        <li>
+            <ul>
+                <li>If years is less than 5, SET rate = 5</li>
+                <li>If years is greater than or equal to 5 and less than 10 SET rate = 6</li>
+                <li>If years is greater than or equal to 10 SET rate = 7</li>
+            </ul>
+        </li>
+        <li>SET weeks</li>
+        <li>DISPLAY "How many weeks have you worked this year?</li>
+        <li>Input weeks</li>
+        <li>SET ptoToDate = (weeks * rate) / 2)</li>
+        <li>SET ptoDays</li>
+        <li>DISPLAY "How much PTO have you taken this year (in days)?"</li>
+        <li>Input ptoDays</li>
+        <li>SET ptoToDate = ptoToDate - (ptoDays * 8)</li>
+        <li>DISPLAY "This is your PTO in hours"</li>
+        <li>DISPLAY "This is your PTO in days"</li>
+        <li>DISPLAY "This is your PTO in weeks"</li>
+    </ol>
+    <form action="#" onsubmit="ptocalc()">
+        <p>How many years have you worked?</p>  
+        <input type="number" id="years">
+        <p>How many weeks have you worked this year?</p>
+        <input type="number" id="weeks">
+        <p>How much PTO have you taken this year (in days)</p>
+        <input type="number" id="ptoDays">
+        <input type="submit">
+    </form>
+    <p>This is your PTO in hours: <span id="hoursOutput" class="output"></span> hours.</p>
+    <p>This is your PTO in days: <span id="daysOutput" class="output"></span> days.</p>
+    <p>This is your PTO in weeks: <span id="weeksOutput" class="output"></span> weeks.</p>
+    <script src="js/version3.js"></script>
+</body>
+</html>

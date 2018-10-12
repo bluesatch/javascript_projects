@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PTO</title>
+</head>
+<body>
+    <h1>PTO Program</h1>
+    <h2>Version 1</h2>
+    <p>A simple program that calculates the amount of PTO for 1 year for an employee that receives 5 hours per paycheck and receives a paycheck bi-weekly</p>
+    <ol>
+        <li>Display 5 hours per paycheck</li>
+        <li>Calculate how many paychecks received for one year if paid bi-weekly</li>
+        <li>Display PTO for 1 yr</li>
+    </ol>
+    <p>Start</p>
+    <p>SET INT hours = 5</p>
+    <p>SET INT payCheck = 26</p>
+    <p>DISPLAY "This is a simple program that outputs how many hours you earn a year for PTO."</p>
+    <p>SET INT PTO = hours * payCheck</p>
+    <p>DISPLAY "You earn <span id="output"></span> hours per year."</p>
+    <p>End</p>
+    <br>
+    <h2>Version 2</h2>
+    <ol>
+        <li>1-5 yrs = 5 hours</li>
+        <li>5 yrs = 6 hrs</li>
+        <li>10 yrs = 7 hrs</li>
+        <li>PTO for 1 yr in weeks</li>
+    </ol>
+
+    <p>Start</p>
+    <p>Get years</p>
+    <p>Set payCheck = 26</p>
+    <p>If years &lt; 5, PTO = 5 * payCheck</p>
+    <p>If years equal to or &gt; 5, PTO = 6 * payCheck</p>
+    <p>If years equal to or &gt; 10, PTO = 7 * payCheck</p>
+    <p>Set PTOWeek = PTO / 40</p>
+    <p>Display PTOWeek</p>
+    <p>End</p>
+    <script>
+        var output = document.getElementById('output');
+        var payCheck = 26;
+        var hours = 5;
+        var PTO = hours * payCheck;
+        output.innerHTML = PTO;
+    </script>
+</body>
+</html>
