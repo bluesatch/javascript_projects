@@ -5,70 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Investment Calculator</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Simple Investment Calculator</h1>
-    <p>A simple investment calculator that takes an initial investment amount in dollars. Then accepts an interest rate between 2-7%. Then takes an additional amount of money for each term of the investment. Enter an investment term (ie, how long). Then specify that the term will be in years or months. Result will be your total interest earned and the total amount in your account.</p>
-    <h2>Pseudocode</h2>
-    <ol>
-        <li>START</li>
-        <li>SET investment</li>
-        <li>DISPLAY "Initial Investment:"</li>
-        <li>INPUT investment</li>
-        <li>SET intRate</li>
-        <li>DISPLAY "Select interest rate"</li>
-        <li>INPUT intRate</li>
-            <ul>
-                <li>2%</li>
-                <li>3%</li>
-                <li>4%</li>
-                <li>5%</li>
-                <li>6%</li>
-                <li>7%</li>
-            </ul>
-        <li>SET additionalAmount</li>
-        <li>DISPLAY "What is your additional contribution?"</li>
-        <li>SET term</li>
-            <ul>
-                <li>months</li>
-                <li>years</li>
-            </ul>
-        <li>DISPLAY "Select term"</li>
-        <li>INPUT term</li>
-        <li>INPUT additionalAmount</li>
-        <li>SET intEarned</li>
-        <li>SET totalAmount</li>
-        <li>Calculate intEarned = investment * intRate * term</li>
-        <li>DISPLAY intEarned</li>
-        <li>Calculate totalAmount = intEarned + investment</li>
-        <li>DISPLAY totalAmount</li>
-        <li>End</li>
-    </ol>
-    <form action="#" onsubmit="investmentcalc()">
-        <p>Intial investment in US Dollars($):</p>
-        <input type="number" id="investment" value="500">
-        <p>Select interest rate:</p>
-        <select name="intRate" id="intRate">
-            <option value=".02">2%</option>
-            <option value=".03">3%</option>
-            <option value=".04">4%</option>
-            <option value=".05">5%</option>
-            <option value=".06">6%</option>
-            <option value=".07">7%</option>
-        </select>
-        <p>Select term:</p>
-        <select name="term" id="term">
-            <option value="year">Year</option>
-            <option value="month">Month</option>
-        </select>
-        <p>Additional Investment:</p>
-        <input type="number" id="additionalAmount" value="0">
-        <input type="submit">
-    </form>
-    <p>Your interest earned will be: <span id="intEarned" class="output"></span>
-    </p>
-    <p>Your total amount earned will be: <span id="totalAmount" class="output"></span></p>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Simple Investment Calculator</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <p>A simple investment calculator that takes an initial investment amount in dollars. Then accepts an interest rate between 2-7%. Then takes an additional amount of money for each term of the investment. Enter an investment term (ie, how long). Then specify that the term will be in years or months. Result will be your total interest earned and the total amount in your account.</p>
+            </div>
+            <div class="col-sm-8">
+                <h2>Pseudocode</h2>
+                <ol>
+                    <li><span class="key">START</span></li>
+                    <li><span class="key">SET</span> investment</li>
+                    <li><span class="key">DISPLAY</span> "Initial Investment:"</li>
+                    <li><span class="key">INPUT</span> investment</li>
+                    <li><span class="key">SET</span> intRate</li>
+                    <li><span class="key">DISPLAY</span> "Select interest rate"</li>
+                    <li><span class="key">INPUT</span> intRate</li>
+                        <ul>
+                            <li>2%</li>
+                            <li>3%</li>
+                            <li>4%</li>
+                            <li>5%</li>
+                            <li>6%</li>
+                            <li>7%</li>
+                        </ul>
+                    <li><span class="key">SET</span> additionalAmount</li>
+                    <li><span class="key">DISPLAY</span> "What is your additional contribution?"</li>
+                    <li><span class="key">SET</span> term</li>
+                        <ul>
+                            <li>months</li>
+                            <li>years</li>
+                        </ul>
+                    <li><span class="key">DISPLAY</span> "Select term"</li>
+                    <li><span class="key">INPUT</span> term</li>
+                    <li><span class="key">INPUT</span> additionalAmount</li>
+                    <li><span class="key">SET</span> intEarned</li>
+                    <li><span class="key">SET</span> totalAmount</li>
+                    <li>Calculate intEarned = investment * intRate * term</li>
+                    <li><span class="key">DISPLAY intEarned</li>
+                    <li>Calculate totalAmount = intEarned + investment</li>
+                    <li><span class="key">DISPLAY</span> totalAmount</li>
+                    <li><span class="key">END</span></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <form action="#" onsubmit="investmentcalc()">
+                    <p>Intial investment in US Dollars($):</p>
+                    <input type="number" id="investment" value="500">
+                    <p>Select interest rate:</p>
+                    <select name="intRate" id="intRate">
+                        <option value=".02">2%</option>
+                        <option value=".03">3%</option>
+                        <option value=".04">4%</option>
+                        <option value=".05">5%</option>
+                        <option value=".06">6%</option>
+                        <option value=".07">7%</option>
+                    </select>
+                    <p>How many periods:</p>
+                    <input type="number" id="periods"value="1">
+                    <p>Select term:</p>
+                    <select name="term" id="term">
+                        <option value="year">Year</option>
+                        <option value="month">Month</option>
+                    </select>
+                    <p>Additional Investment:</p>
+                    <input type="number" id="additionalAmount" value="0">
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>Your interest earned will be: <span id="intEarned" class="output"></span></p> 
+            </div>
+            <div class="col-sm-6">
+                <p>Your total amount earned will be: <span id="totalAmount" class="output"></span></p> 
+            </div>
+        </div>
+    </div>
     <script src="js/invcalc.js"></script>
 </body>
 </html>
