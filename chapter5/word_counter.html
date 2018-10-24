@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Word Counter</title>
+</head>
+<body>
+    <h1>Word Counter</h1>
+    <p>Take the input from the user and return the number of cosonants and vowels in the input.</p>
+    <ol>
+        <li>START</li>
+        <li>SET vowels = [a, e, i, o, u]</li>
+        <li>SET consonants = [b, c, d, f, g, h, j, k, l, m, n, p, q, r, s, t, v, w, x, y, z]</li>
+        <li>SET inp</li>
+        <li>DISPLAY "Enter a sentence"</li>
+        <li>INPUT inp</li>
+        <li>Count the characters in inp</li>
+        <li>For characters in inp DISPLAY total</li>
+   </ol>
+   <br>
+   <form action="#" onsubmit="wordcount()">
+        <p>Enter text:</p>
+        <input type="text" id="str">
+        <input type="submit">
+    </form>
+    <p>Let's break the text down:</p>
+    <span id="output" class="output"></span>
+    <script src="js/wordcount.js"></script>
+</body>
+</html>

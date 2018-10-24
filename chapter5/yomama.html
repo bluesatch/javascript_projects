@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yo Mama</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Yo Mama So...</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 mama">
+                <form action="#" onsubmit="yomama()">
+                    <select name="adjective" id="adjective">
+                        <option value="dumb">dumb</option>
+                        <option value="fat">fat</option>
+                        <option value="ugly">ugly</option>
+                        <option value="old">old</option>
+                    </select>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" class="joke">
+                <span id="output" class="output"></span>
+            </div>
+        </div>
+    </div>
+    <div class="container media">
+        <div class="row">
+            <div class="col-sm-6 music">
+                <audio src="media/YaMama.wav" controls="autoplay"></audio>
+            </div>
+            <div class="col-sm-6">
+                <div class="my-slick">
+                    <div>
+                        <img src="media/mama1.jpg" alt="Mama1">
+                    </div>
+                    <div>
+                        <img src="media/rasputia.jpg" alt="rasputia">
+                    </div>
+                    <div>
+                        <img src="media/benny.jpg" alt="benny">
+                    </div>
+                    <div>
+                        <img src="media/ernest.jpg" alt="ernest">
+                    </div>
+                    <div>
+                        <img src="media/murphy.jpg" alt="murphy">
+                    </div>
+                    <div>
+                        <img src="media/pharcyde.jpg" alt="pharcyde">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 footer">
+                <p>All jokes by Satch</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/yomama.js"></script>  
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".my-slick").slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                autoplay: True,
+                autoplaySpeed: 2000,
+            });
+            });
+    </script>
+</body>
+</html>

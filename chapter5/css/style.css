@@ -1,0 +1,36 @@
+body {
+    background: dodgerblue;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    color: white;
+}
+
+.media {
+    margin-top: 50px;
+}
+
+.mama {
+    text-align: center;
+    padding: 10px;
+    border-radius: 2%;
+    width: 200px;
+    border: 2px solid white;
+}
+
+.output {
+    text-align: center;
+    font-size: 36px;
+    color: white;
+}
+
+img {
+    border: 2px solid white;
+}
+
+.footer {
+    text-align: center;
+    color: white;
+}

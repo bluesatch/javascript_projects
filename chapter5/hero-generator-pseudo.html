@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hero Generator</title>
+</head>
+<body>
+    <!--3 Arrays
+
+    5 Adjectives
+    5 Names
+    5 Powers
+
+    Ex: 
+    The Awesome Phantom can summon lightening
+    The Incredible Hulk can smash.
+
+    var idx = Math.round(Math.random() * 4);
+
+    On an event (form onsubmit, body onload) generate a hero. -->
+
+    <!-- <form onsubmit="event.preventDefault(); generateHero();"> -->
+
+    <!-- <body onload="generateHero();> -->
+
+    <h1>Hero Generator</h1>
+    <ul>
+        <li>START</li>
+        <li>SET adjective</li>
+        <li>SET hero</li>
+        <li>SET power</li>
+        <li>DISPLAY "The 'adjective' 'hero' can 'power'."</li>
+    </ul>
+    <form action="#" onsubmit="generateHero()">
+        <p>Click here to unveil your hero!!</p>
+        <input type="submit">
+    </form>
+    <p><span id="hero" class="output"></span></p>
+    <script src="js/hero.js"></script>
+</body>
+</html>
+
