@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Tip Calculator</h1>
+            </div>
+        </div>
+    </div>
+    <form action="#" onsubmit="tipCalc()">
+        <p>How much is the bill?</p>
+        <input type="text" value="0" id="bill"> <!--type number only takes whole integers-->
+        <p>Select tip amount</p>
+        <select name="tip" id="tip">
+            <option value="0">0</option>
+            <option value=".15">15%</option>
+            <option value=".18">18%</option>
+            <option value=".2">20%</option>
+        </select>
+        <p>Or other amount:</p>
+        <input type="number" value="0" id="otherAmount">
+        <input type="submit" value="Calculate">
+    </form>
+    <p>Your total amount is: <span id="total" class="output"></span></p>
+    <script src="js/tip.js"></script>
+
+    
+</body>
+</html>
