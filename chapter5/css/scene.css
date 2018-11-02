@@ -45,5 +45,6 @@ body {
     border: 3px solid midnightblue;
     background: #ccc9d8;
     margin-top: 50px;
+    padding: 15px;
     /*z-index: 10;*/
 }
