@@ -47,8 +47,15 @@ function scene() {
     var choice = Number(document.querySelector('input[name=choice]:checked').value);
     var titleOutput = document.getElementById('theScene');
     var story = document.getElementById('storyLine');
-    var decision1;
-    var decision2;
+    var decision1 = document.getElementById('choice1');
+    var decision2 = document.getElementById('choice2');
     
+    if (titleOutput === "The Scene" && choice === 1) {
+        titleOutput.textContent = headers[1];
+        story.textContent = scenario[1];
+        decision1.textContent = yes;
+        decision2.textContent = no;
+
+    }
 
 }
