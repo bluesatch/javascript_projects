@@ -1,0 +1,26 @@
+body {
+    background: tan;
+}
+
+h1 {
+    text-align: center;
+    color: dodgerblue;
+}
+
+.instructions {
+    text-align: center;
+}
+
+.questions ol{
+    border: 2px solid dodgerblue;
+}
+
+h2 {
+    text-align: center;
+    color: dodgerblue;
+}
+
+.see {
+    font-size: 18px;
+    color: dodgerblue;
+}

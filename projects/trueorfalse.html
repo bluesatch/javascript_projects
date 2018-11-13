@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>True or False</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/trueorfalse.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>True or False</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="instructions">Evaluate each statement and test whether if it is true or false.</p>
+            </div>
+        </div>
+    </div>
+    <div class="questions">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 tests">
+                    <h2>Tests</h2>
+                    <ol>
+                        <li>true || false</li>
+                        <li>true && true</li>
+                        <li>true || true</li>
+                        <li>false && false</li>
+                        <li>"hello"</li>
+                        <li>(true || false) && (9 > 3)</li>
+                        <li>0</li>
+                        <li>true && (4 < 6)</li>
+                        <li>(6 == 6) || (9 > 10)</li>
+                        <li>10</li>
+                    </ol>
+                </div><!--close col sm 6-->
+                <div class="col-sm-6">
+                    <h2>Results</h2>
+                    <ol id="output"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/trueorfalse.js"></script>
+</body>
+</html>

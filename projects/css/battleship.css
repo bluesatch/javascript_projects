@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box; /* add border box to all the things */
+}
+
+body {
+    background: tan;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.gameboard {
+    width: 600px;
+    height: 600px;
+    border: 2px solid red;
+}
+
+.tile {
+    float: left;
+    width: calc(100%/3);
+    height: calc(100%/3);
+    border: 1px solid black;
+}
+
+.game-buttons {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
