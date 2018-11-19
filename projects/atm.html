@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ATM</title>
+</head>
+<body>
+    <h1>ATM</h1>
+    <h2>Variables</h2>
+    <ul>
+        <li>SET pin equal to zero</li>
+        <li>SET amount equal to zero</li>
+        <li>SET card equal to zero</li>
+        <li>SET balance (random number)</li>
+        <li>SET depositAmount</li>
+    </ul>
+    <h2>Logic</h2>
+    <ul>
+        <li>DISPLAY "Enter your card"</li>
+        <li>INPUT card</li>
+        <li>DISPLAY Enter your PIN code</li>
+        <li>INPUT pin</li>
+        <li>DISPLAY "What would you like to do?"</li>
+            <ul>
+                <li>Withdraw</li>
+                <li>Deposit</li>
+                <li>Check Balance</li>
+                <li>See Bank Statement</li>
+            </ul>
+        <li>If Withdraw:</li>
+            <ul>
+                <li>DISPLAY "How much would you like to withdraw?</li>
+                <li>INPUT amount</li>
+                <li>IF balance is ok</li>
+                <li>DISPLAY "Dispensing funds. Have a nice day."</li>
+                <li>ELSE</li>
+                <li>DISPLAY "Insufficient funds on this card</li>
+            </ul>
+        <li>ELSE IF  Deposit</li>
+            <ul>
+                <li>DISPLAY "How much would you like to deposit?"</li>
+                <li>INPUT depositAmount</li>
+                <li>ADD depositAmount and balance</li>
+                <li>DISPLAY "Here is your new balance</li>
+            </ul>
+        <li>ELSE IF Check Balance</li>
+            <ul>
+                <li>DISPLAY balance</li>
+            </ul>
+        <li>ELSE IF See Bank Statement</li>
+            <ul>
+                <li>DISPLAY "Sorry our system is down. Please check balance on our website or inside."</li>
+            </ul>
+    </ul>
+
+    <h2>Modules</h2>
+    <ul>
+        <li>options</li>
+        <li>withdraw()</li>
+        <li>deposit()</li>
+        <li>checkBalance()</li>
+        <li>bankStatement()</li>
+    </ul>
+</body>
+</html>
