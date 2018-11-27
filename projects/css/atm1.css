@@ -1,0 +1,28 @@
+body {
+    background: tan;
+    color: black;
+}
+h1 {
+    text-align: center;
+}
+
+.header {
+    border-bottom: 2px solid black;
+}
+
+li {
+    font-size: 18px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+.end {
+    text-transform: capitalize;
+    color: red;
+}
+
+.bottom-link {
+    text-align: center;
+}

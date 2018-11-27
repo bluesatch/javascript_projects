@@ -5,63 +5,252 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ATM</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/atm1.css">
 </head>
 <body>
-    <h1>ATM</h1>
-    <h2>Variables</h2>
-    <ul>
-        <li>SET pin equal to zero</li>
-        <li>SET amount equal to zero</li>
-        <li>SET card equal to zero</li>
-        <li>SET balance (random number)</li>
-        <li>SET depositAmount</li>
-    </ul>
-    <h2>Logic</h2>
-    <ul>
-        <li>DISPLAY "Enter your card"</li>
-        <li>INPUT card</li>
-        <li>DISPLAY Enter your PIN code</li>
-        <li>INPUT pin</li>
-        <li>DISPLAY "What would you like to do?"</li>
-            <ul>
-                <li>Withdraw</li>
-                <li>Deposit</li>
-                <li>Check Balance</li>
-                <li>See Bank Statement</li>
-            </ul>
-        <li>If Withdraw:</li>
-            <ul>
-                <li>DISPLAY "How much would you like to withdraw?</li>
-                <li>INPUT amount</li>
-                <li>IF balance is ok</li>
-                <li>DISPLAY "Dispensing funds. Have a nice day."</li>
-                <li>ELSE</li>
-                <li>DISPLAY "Insufficient funds on this card</li>
-            </ul>
-        <li>ELSE IF  Deposit</li>
-            <ul>
-                <li>DISPLAY "How much would you like to deposit?"</li>
-                <li>INPUT depositAmount</li>
-                <li>ADD depositAmount and balance</li>
-                <li>DISPLAY "Here is your new balance</li>
-            </ul>
-        <li>ELSE IF Check Balance</li>
-            <ul>
-                <li>DISPLAY balance</li>
-            </ul>
-        <li>ELSE IF See Bank Statement</li>
-            <ul>
-                <li>DISPLAY "Sorry our system is down. Please check balance on our website or inside."</li>
-            </ul>
-    </ul>
-
-    <h2>Modules</h2>
-    <ul>
-        <li>options</li>
-        <li>withdraw()</li>
-        <li>deposit()</li>
-        <li>checkBalance()</li>
-        <li>bankStatement()</li>
-    </ul>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 id="top">ATM</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 todo">
+                    <h2>To-Do</h2>
+                    <ul>
+                        <li>Greet</li>
+                        <li>Accept card</li>
+                        <li>Set language</li>
+                        <li>Check PIN</li>
+                        <li>Validate PIN</li>
+                        <li>Return balance</li>
+                        <li>Choose a banking option</li>
+                            <ul>
+                                <li>see balance</li>
+                                <li>make withdraw</li>
+                                    <ul>
+                                        <li>savings withdrawals</li>
+                                        <li>checking withdrawal</li>
+                                    </ul>
+                                <li>make deposit</li>
+                                    <ul>
+                                        <li>savings deposit</li>
+                                        <li>checking deposit</li>
+                                    </ul>
+                            </ul>
+                    </ul>
+                </div><!--close todo-->
+                <div class="col-sm-4 variables">
+                    <h2>Variables</h2>
+                    <ul>
+                        <li>greeting</li>
+                        <li>card</li>
+                        <li>pinAttempt: SET to 1</li>
+                        <li>pin</li>
+                        <li>pinCheck</li>
+                        <li>savingsBalance</li>
+                        <li>checkingBalance</li>
+                        <li>language</li>
+                        <li>depositAmount</li>
+                        <li>withdrawAmount</li>
+                        <li>withdrawLimit: SET to 500</li>
+                    </ul>
+                </div><!--close variables-->
+                <div class="col-sm-4 modules">
+                    <h2>Modules</h2>
+                        <ul>
+                            <li><a href="#opening">opening</a></li>
+                            <li><a href="#options">optionScreen</a></li>
+                            <li><a href="#checkCard">checkCard</a></li>
+                            <li><a href="#checkPin">checkPIN</a></li>
+                            <li><a href="#savingsWithdrawal">savingsWithdrawal</a></li>
+                            <li><a href="#checkingWithdrawal">checkingWithdrawal</a></li>
+                            <li><a href="#savingsDeposit">savingsDeposit</a></li>
+                            <li><a href="#checkingDeposit">checkingDeposit</a></li>
+                            <li><a href="#checkBalance">checkBalance</a></li>
+                            <li>setLanguage</li>
+                        </ul>
+                        <h2>Card</h2>
+                        <ul>
+                            <li>Name</li>
+                            <li>Number</li>
+                            <li>Expiration Date</li>
+                            <li>Security Code</li>
+                        </ul>
+                </div><!--close modules-->
+            </div><!--close row-->
+            <div class="row">
+                <div class="col-sm-12 logic">
+                    <h2>Logic</h2>
+                    <ul>
+                        <li id="opening">opening()</li>
+                            <ul>
+                                <li>SET greeting to "Welcome to Bank of Satch!"</li>
+                                <li>DISPLAY greeting</li>
+                                <li>DISPLAY "Please Enter Card"</li>
+                                <li>checkCard()</li>
+                            </ul>
+                        <li id="checkCard">checkCard()</li>
+                            <ul>
+                                <li>SET card to zero</li>
+                                <li>INPUT card</li>
+                                <li>IF card is true:</li>
+                                    <ul>
+                                        <li>checkPIN()</li>
+                                    </ul>
+                                <li>ELSE IF card is false:</li>
+                                    <ul>
+                                        <li>DISPLAY "Invalid card"</li>
+                                        <li class="end">END</li>
+                                    </ul>
+                            </ul>
+                        <li id="checkPin">checkPIN()</li>
+                            <ul>
+                                <li>DISPLAY "Enter Your 4-Digit pin"</li>
+                                <li>SET pin to zero</li>
+                                <li>SET pinCheck to 1234</li>
+                                <li>INPUT pin</li>
+                                <li>IF pin is equal to pinCheck:</li>
+                                    <ul>
+                                        <li>optionScreen()</li>
+                                    </ul>
+                                <li>ELSE:</li>
+                                    <ul>
+                                        <li>pinAttempt += 1</li>
+                                        <li>DISPLAY "Invalid PIN. Please Try Again."</li>
+                                        <li>LOOP checkPIN()</li>
+                                    </ul>
+                                <li>IF pinAttempt = 3:</li>
+                                    <ul>
+                                        <li>DISPLAY "Maximum Amount of Tries</li>
+                                        <li class="end">END</li>
+                                    </ul>
+                            </ul>
+                        <li id="options">optionScreen()</li>
+                            <ul>
+                                <li>DISPLAY "Please Select an Option"</li>
+                                <li>DISPLAY "Make Deposit", "Make Withdrawal", "View Balance"</li>
+                            </ul>
+                        <li>IF "Make Deposit":</li>
+                            <ul>
+                                <li>DISPLAY "Click Savings or Checking Deposit"</li>
+                                <li>IF "Savings"</li>
+                                    <ul>
+                                        <li id="savingsDeposit">savingsDeposit()</li>
+                                        <li>DISPLAY "How much is the deposit?"</li>
+                                        <li>INPUT depositAmount</li>
+                                        <li>SET savingsBalance = depositAmount + savingsBalance</li>
+                                        <li>DISPLAY "Here is your new balance:" + savingsBalance</li>
+                                    </ul>
+                                <li>ELSE "Checking"</li>
+                                    <ul>
+                                        <li id="checkingDeposit">checkingDeposit()</li>
+                                        <li>DISPLAY "How much is the deposit?"</li>
+                                        <li>INPUT depositAmount</li>
+                                        <li>SET checkingBalance = depositAmount + checkingBalance</li>
+                                        <li>DISPLAY "Here is your new balance:" + checkingBalance</li>
+                                    </ul>
+                            </ul>
+                        <li>ELSE IF "Make Withdrawal"</li>
+                            <ul>
+                                <li>DISPLAY "From Savings or Checking?"</li>
+                                <li>IF "Savings"</li>
+                                    <ul>
+                                        <li id="savingsWithdrawal">savingsWithdrawal()</li>
+                                        <li>DISPLAY "How much would you like to withdraw?</li>
+                                        <li>INPUT savingsWithdrawal</li>
+                                        <li>IF savingsWithdrawal &gt; withdrawLimit:</li>
+                                        <ul>
+                                            <li>DISPLAY "Excessive Amount"</li>
+                                            <li>LOOP savingsWithdrawal</li>
+                                        </ul>
+                                        <li>ELSE IF savingsWithdrawal &lt; withdrawLimit</li>
+                                        <li>IF savingsWithdrawal &lt; savingsBalance:</li>
+                                            <ul>
+                                                <li>DISPLAY "Dispensing" + savingsWithdrawal</li>
+                                                <li>DISPLAY "Would you like another transaction?"</li>
+                                                <li>IF "Yes"</li>
+                                                    <ul>
+                                                        <li>LOOP to optionScreen()</li>
+                                                    </ul>
+                                                <li>ELSE "No"</li>
+                                                    <ul>
+                                                        <li class="end">END</li>
+                                                    </ul>
+                                            </ul>
+                                        <li>ELSE IF savingsWithdrawal &gt; savingsBalance:</li>
+                                            <ul>
+                                                <li>DISPLAY "You have insufficient funds for this transaction."</li>
+                                                <li>DISPLAY "Choose Another Transaction or END"</li>
+                                                    <ul>
+                                                        <li>IF "Another Transaction":</li>
+                                                        <li>LOOP to optionScreen()</li>
+                                                        <li>ELSE IF "END"</li>
+                                                            <ul>
+                                                                <li class="end">END</li>
+                                                            </ul>
+                                                    </ul>
+                                            </ul>
+                                    </ul>
+                                <li>ELSE IF "Checking"</li>
+                                <ul>
+                                    <li id="checkingWithdrawal">checkingWithdrawal()</li>
+                                    <li>DISPLAY "How much would you like to withdraw?</li>
+                                    <li>INPUT checkingWithdrawal</li>
+                                    <li>IF checkingWithdrawal &lt; checkingBalance:</li>
+                                        <ul>
+                                            <li>DISPLAY "Dispensing" + checkingWithdrawal</li>
+                                            <li>DISPLAY "Would you like another transaction?"</li>
+                                            <li>IF "Yes"</li>
+                                                <ul>
+                                                    <li>LOOP to optionScreen()</li>
+                                                    </ul>
+                                            <li>ELSE "No"</li>
+                                                <ul>
+                                                    <li class="end">END</li>
+                                                </ul>
+                                        </ul>
+                                    <li>ELSE IF checkingWithdrawal &gt; checkingBalance:</li>
+                                        <ul>
+                                            <li>DISPLAY "You have insufficient funds for this transaction."</li>
+                                            <li>DISPLAY "Choose Another Transaction or END"</li>
+                                                <ul>
+                                                    <li>IF "Another Transaction":</li>
+                                                    <li>LOOP to optionScreen()</li>
+                                                    <li>ELSE IF "END"</li>
+                                                        <ul>
+                                                            <li class="end">END</li>
+                                                        </ul>
+                                                </ul>
+                                        </ul>
+                                </ul>
+                            </ul>
+                        <li>IF "View Balance":</li>    
+                            <ul>
+                                <li id="checkBalance">checkBalance()</li>
+                                <li>DISPLAY "Savings or Checking?"</li>
+                                <li>IF "Savings"</li>
+                                    <ul>
+                                        <li>DISPLAY savingsBalance</li>
+                                        <li>LOOP to optionScreen()</li>
+                                    </ul>
+                                <li>ELSE IF "Checking"</li>
+                                    <ul>
+                                        <li>DISPLAY checkingBalance</li>
+                                        <li>LOOP to optionScreen()</li>
+                                    </ul>
+                            </ul>
+                    </ul>            
+                </div><!--close logic-->
+            </div>
+        </div>
+    </div>
+    <p class="bottom-link"><a href="#top">Top</a></p>
 </body>
 </html>
