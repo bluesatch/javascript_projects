@@ -1,0 +1,188 @@
+body {
+    background: darkslategray;
+}
+
+.header h1 {
+    font-size: 48px;
+    text-align: center;
+    color: dodgerblue;
+    text-decoration: underline;
+}
+
+.screen-section {
+    background: lightgray;
+    transform: perspective(30px) rotateX(-.15deg);
+    padding-bottom: 10px;
+}
+.screen {
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    background: black;
+    border-radius: 10px;
+}
+
+.options {
+    position: absolute;
+    top: 165px;
+    height: 180px;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.options button {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background: dodgerblue;
+    box-shadow: 2px 2px 2px 2px #777777;
+}
+
+.option1 {
+    position: absolute;
+    left: -45px;
+}
+
+.option2 {
+    position: absolute;
+    top: 50px;
+    left: -45px;
+}
+
+.option3 {
+    position: relative;
+    top: 100px;
+    left: -45px;
+
+}
+
+.option4 {
+    position: absolute;
+    right: -45px;
+}
+
+.option5 {
+    position: absolute;
+    top: 50px;
+    right: -45px;
+}
+
+.option6 {
+    position: absolute;
+    top: 100px;
+    right: -45px;
+}
+
+.dispensers {
+    margin:top 100px;
+    height: 75px;
+}
+
+.cardDispenser {
+    margin-top: 50px;
+    margin-left: 70px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #777777;
+}
+.cardDispenser hr{
+    display:block;
+    height: 1px;
+    width: 60%;
+    border: 0px;
+    text-align: center;
+    border-top: 10px solid #000;
+    padding: 0px;
+}
+
+.cashDispenser {
+    margin-top: 50px;
+    margin-left: 70px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #777;
+}
+
+.cashDispenser hr {
+    display: block;
+    height: 1px;
+    width: 90%;
+    border: 0px;
+    margin-right: 25px;
+    border-top: 10px solid #000;
+    padding: 0px;
+
+}
+
+.cardDispenser p {
+    text-align: center;
+    font-size: 24px;
+    color: black;
+
+}
+
+.cashDispenser p {
+    text-align: center;
+    font-size: 24px;
+    color: black;
+}
+
+.keypad {
+    background: lightgray;
+    /*border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;*/
+    transform: perspective(30px) rotateX(1deg);
+}
+
+.receiptDispenser {
+    margin-top: 50px;
+    margin-left: 70px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #777;
+
+}
+
+.receiptDispenser hr {
+    display: block;
+    height: 1px;
+    width: 80%;
+    border: 0px;
+    text-align: center;
+    border-top: 10px solid #000;
+    padding: 0px;
+}
+
+.receiptDispenser p {
+    text-align: center;
+    font-size: 24px;
+    color: black;
+}
+
+.keys button {
+    margin-top: 10px;
+    width: 90px;
+    height: 45px;
+    border-radius: 10px;
+    background: #959699;
+    border: 2px solid black;
+    font-size: 24px;
+    color: white;
+}
+
+button.cancel {
+    background: red;
+    color: black;
+}
+
+button.delete {
+    background: yellow;
+    color: black; 
+}
+
+button.enter {
+    background: green;
+    color: black; 
+}
